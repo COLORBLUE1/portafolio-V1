@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTAFOLIO</title>
+</head>
+
+<body>
+  <div class="contenedor_circule">
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+  </div>
+  <section class="inicio_section">
+
+    <h1>Hi 👋 i am </h1>
+    <h1>Camilo Sol</h1>
+    <h1>Apasionado programador y diseñador </h1>
+
+    <div class="botones">
+      <button>
+        <a href="" >Descargar CV</a>
+      </button>
+
+      <button>
+        <a href="">Contactame</a>
+      </button>
+    </div>
+
+  </section>
+
+  <div id="dowm" class="imagen-dowm">
+    <a href="#targetTitle" class="scroll-link">
+    <img  src="./assets/Recursos-img/flecha_hacia_abajo.png" width="50px"
+      height="50px">
+    </a>
+  </div>
+  <section class="Sobre_mi_section">
+    <div>
+
+      <img alt="perfil_imagen" src="./assets/Recursos-img/Perfil_1.jpg"
+        width="200px" height="200px">
+      <h3 id="targetTitle">¿Quien soy?</h3>
+      <h2>SOBRE MI</h2>
+      <p>Mi nombre es camilo sol, soy un aprendiz diario de la vida he entusiasta de la programación asi mismo cuento
+        con conocimientos de diseño y multimedia
+        <b> “Cada dia se aprende algo”</b>
+      </p>
+    </div>
+  </section>
+  <section class="section_portafolio">
+    <div>
+      <h3>¿Qué he hecho?</h3>
+      <h2>PORTAFOLIO</h2>
+      <h3>programación</h3>
+    </div>
+    <div>
+      <p>
+        <img alt="Base_datos" src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" width="450px"
+          height="300px">
+        Este proyecto consiste en agregar empleados con distintas características y luego realizar análisis en la base
+        de datos, para la elaboracion de este proyecto se uso lenguajes como <span>HTML</span> tambien <span>CSS</span>
+      </p>
+    
+      <img alt="GITHUB_ICON"
+        src="./assets/Recursos-img/github.png" width="50px"
+        height="50px">
+    
+      <img alt="ENLACE-ICON"
+        src="./assets/Recursos-img/link.png" width="50px"
+        height="50px">
+  
+    </div>
+
+    <div>
+      <p>
+        <img alt="Base_datos" src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" width="450px"
+          height="300px">
+        Este projggvhgvchchggar empleados con distintas características y luego realizar análisis en la base de datos,
+        para la elaboracion de este proyecto se uso lenguajes como <span>HTML</span> tambien <span>CSS</span>
+      </p>
+
+
+ 
+      <img alt="GITHUB_ICON"
+        src="./assets/Recursos-img/github.png" width="50px"
+        height="50px">
+    
+      <img alt="ENLACE-ICON"
+        src="./assets/Recursos-img/link.png" width="50px"
+        height="50px">
+  
+    </div>
+
+   
+  </section>
+  <h3 class="mas_proyectos">
+    Mas proyectos de programación interesantes <a target="_blank"
+      href="https://github.com/COLORBLUE1?tab=repositories">Aqui</a>
+  </h3>
+
+  <section class="section_portafolio_2">
+    <div>
+      <h3>¿Qué he hecho?</h3>
+      <h2>PORTAFOLIO</h2>
+      <h3>Diseño Visual</h3>
+    </div>
+
+    <div>
+      <img alt="" src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" width="400px" height="250px">
+      <img alt="" src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" width="400px" height="250px">
+      <img alt="" src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" width="400px" height="250px">
+      <img alt="" src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_640.jpg" width="400px" height="250px">
+    </div>
+
+  </section>
+  <section class="section_skills">
+    <div>
+      <h3>¿Qué manejo?</h3>
+      <h2>SKILLS</h2>
+    </div>
+    <div>
+      <img width="50px" height="50px" alt=""
+        src="https://cdn.pixabay.com/photo/2022/12/01/04/35/sunset-7628294_640.jpg" />
+       
+      <img width="50px" height="50px" alt=""
+        src="https://cdn.pixabay.com/photo/2022/12/01/04/35/sunset-7628294_640.jpg" />
+      <img width="50px" height="50px" alt=""
+        src="https://cdn.pixabay.com/photo/2022/12/01/04/35/sunset-7628294_640.jpg" />
+      <img width="50px" height="50px" alt=""
+        src="https://cdn.pixabay.com/photo/2022/12/01/04/35/sunset-7628294_640.jpg" />
+    </div>
+  </section>
+  <script >
+  
+  document.addEventListener('DOMContentLoaded', function () {
+  var scrollLink = document.querySelector('.scroll-link');
+  var targetTitle = document.getElementById('targetTitle');
+
+  scrollLink.addEventListener('click', function (event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+    var targetPosition = targetTitle.offsetTop; // Posición vertical del título
+    var offset = 20; // Ajusta el desplazamiento adicional según sea necesario
+
+    window.scrollTo({
+      top: targetPosition - offset,
+      behavior: 'smooth' // Desplazamiento suave
+    });
+  });
+});
+
+</script>
+  <script src="../../assets/prueba.js"></script>
+</body>
+</html>
