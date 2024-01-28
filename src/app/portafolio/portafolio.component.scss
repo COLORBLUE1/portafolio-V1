@@ -432,7 +432,7 @@ html {
     }
 
     a {
-      gap: 10px;
+    
       img {
         box-shadow: white;
       }
@@ -468,8 +468,10 @@ html {
       color: rgb(1, 1, 121);
     }
 
-    a {
+    a{
       img {
+        margin-left: 10px;
+        margin-right: 10px;
         box-shadow: white;
       }
 
