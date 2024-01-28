@@ -36,7 +36,7 @@ html {
     font-weight: 200;
   }
   h1:nth-child(2) {
-    background:  -webkit-linear-gradient(yellow, rgb(0, 4, 255));
+    background-image: url(https://storage.googleapis.com/www-paredro-com/uploads/2020/02/6cf01be6-magic.png);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -89,7 +89,7 @@ html {
   button:hover {
     animation: pulse; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s; /* don't forget to set a duration! */
-    background-color: $background; 
+    background-color: $background;
     border: 1px solid;
     border-color: blue;
   }
@@ -334,6 +334,53 @@ html {
       top: -60px;
     }
   }
+
+  .contenedor_figuras {
+    position: absolute;
+    opacity: 50%;
+    div:nth-child(1) {
+      width: 50px;
+      height: 50px;
+      background-color: $Color_decoration;
+      border-radius: 50px 30px;
+      position: absolute;
+      top: 100px;
+      left: -160px; /* Ajusta el valor inicial para que el círculo comience fuera de la pantalla */
+      transition: background-color 0.3s; /* Añade una transición suave para el cambio de color */
+      animation: rotateAnimation 15s infinite;
+    }
+
+    div:nth-child(2) {
+      width: 50px;
+      height: 50px;
+      background-color: $Color_decoration;
+      border-radius: 10px 30px;
+      position: absolute;
+      top: 150px;
+      left: -5px; /* Ajusta el valor inicial para que el círculo comience fuera de la pantalla */
+      transition: background-color 0.3s; /* Añade una transición suave para el cambio de color */
+      animation: rotateAnimation 10s linear infinite;
+    }
+
+    div:nth-child(3) {
+      width: 50px;
+      height: 50px;
+      background-color: $Color_decoration;
+      border-radius: 5px 15px 30px;
+      top: -45px;
+      left: -350px;
+      transition: background-color 0.3s; /* Añade una transición suave para el cambio de color */
+      animation: rotateAnimation 50s linear infinite;
+    }
+  }
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg); /* Rotación inicial */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotación completa (una vuelta completa) */
+  }
 }
 
 .section_portafolio {
@@ -359,12 +406,20 @@ html {
       font-weight: normal;
     }
   }
-  div {
+  div:nth-child(2) {
     margin-top: 200px;
     color: white;
+
     p {
       text-align: justify;
+      img:nth-child(1) {
+        border-radius: 10px;
+        float: left; /* La imagen se colocará a la izquierda del texto */
+        margin-right: 30px;
+        margin-top: -50px; /* Ajusta el margen derecho según sea necesario */
+      }
     }
+
     span:nth-child(2) {
       color: orange;
       font-size: 20px;
@@ -376,32 +431,31 @@ html {
       color: rgb(1, 1, 121);
     }
 
-    img:nth-child(1) {
-      border-radius: 30px;
-      float: left; /* La imagen se colocará a la izquierda del texto */
-      margin-right: 30px;
-      margin-top: -50px; /* Ajusta el margen derecho según sea necesario */
-    }
-    img:nth-child(2) {
-      border-radius: 50%;
-      margin-top: 50px;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-bottom: 10px;
-    }
-    img:nth-child(3) {
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-bottom: 10px;
-      border-radius: 40%;
+    a {
+      gap: 10px;
+      img {
+        box-shadow: white;
+      }
+
+      img:hover {
+        animation: pulse;
+        animation-duration: 2s;
+      }
     }
   }
 
   div:nth-child(3) {
     margin-top: 200px;
     color: white;
+
     p {
       text-align: justify;
+      img:nth-child(1) {
+        border-radius: 30px;
+        float: right; /* La imagen se colocará a la izquierda del texto */
+        margin-left: 30px;
+        margin-top: -50px; /* Ajusta el margen derecho según sea necesario */
+      }
     }
     span:nth-child(2) {
       color: orange;
@@ -414,24 +468,15 @@ html {
       color: rgb(1, 1, 121);
     }
 
-    img:nth-child(1) {
-      border-radius: 30px;
-      float: right; /* La imagen se colocará a la izquierda del texto */
-      margin-left: 30px;
-      margin-top: -50px; /* Ajusta el margen derecho según sea necesario */
-    }
-    img:nth-child(2) {
-      border-radius: 50%;
-      margin-top: 50px;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-bottom: 10px;
-    }
-    img:nth-child(3) {
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-bottom: 10px;
-      border-radius: 40%;
+    a {
+      img {
+        box-shadow: white;
+      }
+
+      img:hover {
+        animation: pulse;
+        animation-duration: 2s;
+      }
     }
   }
 }
@@ -500,6 +545,7 @@ html {
     }
   }
 }
+
 .section_skills {
   margin-top: 800px;
 
@@ -517,40 +563,78 @@ html {
       font-weight: normal;
     }
   }
+
+  /*Apatado lenguales*/
   div:nth-child(2) {
-    display: flex;
-    gap: 50px;
-
-    img:nth-child(1) {
-      border-radius: 50px;
-      position: relative;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+    background-color: aliceblue;
+    display: grid;
+    justify-content: start;
+    h3 {
+      color: red;
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: blue;
+      }
     }
 
-    img:nth-child(2) {
-      border-radius: 50px;
-      position: relative;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+    img {
+      border-radius: 10%;
+    }
+  }
+
+  /*Apatado programas desing*/
+  div:nth-child(3) {
+    background-color: aliceblue;
+    display: grid;
+
+    h3 {
+      color: red;
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: blue;
+      }
     }
 
-    img:nth-child(3) {
-      border-radius: 50px;
-      position: relative;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+    img {
+      border-radius: 10%;
+    }
+  }
+  /*Apatado librerias*/
+  div:nth-child(4) {
+    background-color: aliceblue;
+    display: grid;
+    justify-content: start;
+    h3 {
+      color: red;
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: blue;
+      }
     }
 
-    img:nth-child(4) {
-      border-radius: 50px;
-      position: relative;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+    img {
+      border-radius: 10%;
+    }
+  }
+  /*Apatado framework*/
+  div:nth-child(5) {
+    background-color: aliceblue;
+    display: grid;
+    justify-content: start;
+    h3 {
+      color: red;
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: blue;
+      }
+    }
+
+    img {
+      border-radius: 10%;
     }
   }
 }
