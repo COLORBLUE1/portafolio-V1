@@ -5,6 +5,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="../portafolio/dist/normalize.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -17,16 +18,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTAFOLIO</title>
   </head>
- 
-  <body> 
-    <nav>
-    
-  </nav>
-    <a href="#top"
-      ><img
-        alt="flecha hacia arriba"
-        src="./assets/Recursos-img/flecha_hacia_arriba.svg"
-    /></a>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#Sobre_mi_section">SOBRE MI</a></li>
+          <li><a href="#section_portafolio">PROYECTOS</a></li>
+          <li><a href="#section_skills">SKILLS</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <div class="contenedor_circule">
       <div class="circulo"></div>
@@ -44,7 +45,7 @@
       <div>
         <h1>Hi 👋 i am</h1>
         <h1>Camilo Sol</h1>
-        <h1>Apasionado programador y diseñador</h1>
+        <h1>Front End Developer</h1>
       </div>
       <div class="botones">
         <button>
@@ -57,22 +58,14 @@
         </button>
       </div>
       <div id="dowm" class="imagen-dowm">
-        <a href="#targetTitle" class="scroll-link">
-          <img
-            src="./assets/Recursos-img/flecha_hacia_abajo.svg"
-            width="50px"
-            height="50px"
-          />
-        </a>
-        <h3 id="targetTitle"></h3>
       </div>
     </section>
 
-    <section class="Sobre_mi_section">
+    <section id="Sobre_mi_section" class="Sobre_mi_section">
       <div>
         <img
           alt="perfil_imagen"
-          src="./assets/Recursos-img/Perfil-photos/Perfil_2.jpg"
+          src="../../../src/assets/Recursos-img/3D/viking_room.glb"
           width="200px"
           height="200px"
         />
@@ -86,7 +79,7 @@
         </p>
       </div>
     </section>
-    <section class="section_portafolio">
+    <section id="section_portafolio" class="section_portafolio">
       <div>
         <h3>¿Qué he hecho?</h3>
         <h2>PROYECTOS</h2>
@@ -203,7 +196,7 @@
         ></iframe>
       </div>
     </section>
-    <section class="section_skills">
+    <section id="section_skills" class="section_skills">
       <div>
         <h3>¿Qué manejo?</h3>
         <h2>SKILLS</h2>
@@ -382,7 +375,7 @@
       <h2>GRACIAS POR VISITAR 🤠</h2>
     </div>
   </footer>
-  
+
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path
       fill="#0099ff"
